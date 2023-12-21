@@ -10,7 +10,7 @@ const showHeader = ref(true);
   <main>
     <nav v-if="showHeader" class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand" href="#">InteliData</a>
+        <a class="navbar-brand" href="#">Soliddata</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor04"
                 aria-controls="navbarColor04" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
