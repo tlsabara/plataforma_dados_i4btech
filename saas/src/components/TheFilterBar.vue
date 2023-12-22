@@ -10,8 +10,14 @@ defineProps({
   <main>
     <div class="d-flex justify-content-between">
       <div>
-        <ButtonSideMenuControl inner-text="Filtros"/>
-        <ButtonSideMenuControl inner-text="Exportação"/>
+        <ButtonSideMenuControl
+          inner-text="Filtros"
+          target-id="#offcanvasFilter"
+        />
+        <ButtonSideMenuControl
+          inner-text="Exportação"
+          target-id="#offcanvasExport"
+        />
       </div>
       <div>
         <h4>
