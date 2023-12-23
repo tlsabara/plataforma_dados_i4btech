@@ -1,5 +1,6 @@
 <script setup>
-import {ref} from "vue";
+import {computed, reactive, ref} from "vue";
+import router from "@/router/index.js";
 
 const displayMenuItems = ref(true);
 const showHeader = ref(true);
@@ -18,12 +19,12 @@ const showHeader = ref(true);
         <div v-if="displayMenuItems" class="collapse navbar-collapse" id="navbarColor04">
           <ul class="navbar-nav me-auto">
             <li class="nav-item">
-              <a class="nav-link active" href="#">Home
+              <a class="nav-link" @click="router.push({name: 'home'})">Home
                 <span class="visually-hidden">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Financeiro</a>
+              <a class="nav-link" @click="router.push({name: 'finance'})">Financeiro</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Logistica</a>

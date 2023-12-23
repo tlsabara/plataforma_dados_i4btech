@@ -10,13 +10,11 @@ import ExportSideBody from "@/components/SideBodies/ExportSideBody.vue";
 
 <template>
   <main>
-    <TheHeaderMenu>
-
-    </TheHeaderMenu>
+    <TheHeaderMenu/>
     <TheMainContainer>
       <TheFilterBar
-        dashboard-title="Relatório Financeiro"
-        dashboard-description="Relatórios de contas a pagar"
+        dashboard-title="Home"
+        dashboard-description="Interface de relatórios"
       />
       <TheSideMenu
         title="Filtros"
