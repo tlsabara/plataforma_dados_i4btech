@@ -5,46 +5,59 @@ import TheSideMenu from "@/components/TheSideMenu.vue";
 import TheFilterBar from "@/components/TheFilterBar.vue";
 import FilterSideBody from "@/components/SideBodies/FilterSideBody.vue";
 import ExportSideBody from "@/components/SideBodies/ExportSideBody.vue";
+import ToastToRemake from "@/components/ToastToRemake.vue";
 
 </script>
 
 <template>
-  <main>
-    <TheHeaderMenu/>
-    <TheMainContainer>
-      <TheFilterBar
-        dashboard-title="Home"
-        dashboard-description="Interface de relatórios"
-      />
-      <TheSideMenu
-        title="Filtros"
-        id-label="offcanvasFilterLabel"
-        id-offcanvas="offcanvasFilter"
-      >
-        <FilterSideBody/>
-      </TheSideMenu>
-      <TheSideMenu
-        title="Exportação"
-        id-label="offcanvasExportLabel"
-        id-offcanvas="offcanvasExport"
-      >
-        <ExportSideBody/>
-      </TheSideMenu>
-
-      <div class="position-absolute top-0 end-0 mt-5 mx-5 p-0 toast show text-dark" role="alert" aria-live="assertive" aria-atomic="true">
-        <div class="toast-header">
-          <strong class="me-auto text-success">Exportação concluída!</strong>
-          <small>Agora</small>
-          <button type="button" class="btn-close ms-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
-            <span aria-hidden="true"></span>
-          </button>
-        </div>
-        <div class="toast-body">
-          Sua exportação foi concluida com sucesso.
-        </div>
-      </div>
+    <main>
+        <TheHeaderMenu/>
+        <TheMainContainer>
+            <TheFilterBar
+                    dashboard-title="Home"
+                    dashboard-description="Interface de relatórios"
+            />
+            <TheSideMenu
+                    title="Filtros"
+                    id-label="offcanvasFilterLabel"
+                    id-offcanvas="offcanvasFilter"
+            >
+                <FilterSideBody/>
+            </TheSideMenu>
+            <TheSideMenu
+                    title="Exportação"
+                    id-label="offcanvasExportLabel"
+                    id-offcanvas="offcanvasExport"
+            >
+                <ExportSideBody/>
+            </TheSideMenu>
 
 
-    </TheMainContainer>
-  </main>
+            <ToastToRemake
+                    variant="success"
+            >
+                <template v-slot:time>Hoje</template>
+                <template v-slot:title>Exportação concluida</template>
+                <template v-slot:message>
+                    Sua exportação foi concluida com sucesso!!!
+                </template>
+            </ToastToRemake>
+
+            <div class="row d-flex justify-content-center">
+                <div class="col col-6 d-grid gap-2">
+                    <button class="btn btn-lg btn-primary" type="button">
+                        <h4 class="text-white">Financeiro</h4>
+                    </button>
+                    <button class="btn btn-lg btn-primary" type="button">
+                        <h4 class="text-white">Comercial</h4>
+                    </button>
+                    <button class="btn btn-lg btn-primary" type="button">
+                        <h4 class="text-white">Logistica</h4>
+                    </button>
+                </div>
+            </div>
+
+
+        </TheMainContainer>
+    </main>
 </template>
